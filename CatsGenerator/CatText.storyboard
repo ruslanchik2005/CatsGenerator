@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cat Text View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="CatTextViewController" customModule="CatsGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dix-rP-eB7">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1da-5N-vGA">
+                                <rect key="frame" x="0.0" y="62" width="440" height="894"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MHt-GH-sUW">
+                                        <rect key="frame" x="0.0" y="0.0" width="440" height="640"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="catImageView" translatesAutoresizingMaskIntoConstraints="NO" id="v5s-H4-mwd" userLabel="catImageView">
+                                                <rect key="frame" x="20" y="20" width="400" height="400"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="v5s-H4-mwd" secondAttribute="height" multiplier="1:1" id="yNo-96-bcJ"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqL-jI-Lwb">
+                                                <rect key="frame" x="40" y="494" width="360" height="34.333333333333371"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="САЗДАЦ КОТЕГА"/>
+                                                <connections>
+                                                    <action selector="didTapButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="EXw-fu-1TB"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ПАПРОБУЙ ЗОГРУЗИТЬ КОТЕГА!!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exF-kk-o00">
+                                                <rect key="frame" x="20" y="548.33333333333337" width="400" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="glW-V6-sQ3">
+                                                <rect key="frame" x="210" y="210" width="20" height="20"/>
+                                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </activityIndicatorView>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="НОПИШИ СЮДЫ МЕМАСЕГ!!!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H6S-xx-hd7">
+                                                <rect key="frame" x="40" y="440" width="360" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="inputChanged:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="ugH-Pn-J3A"/>
+                                                    <action selector="textCat:" destination="4gB-Dg-hSa" eventType="editingDidEnd" id="Ykn-ah-f5G"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="А КЪДЕ ТЕКСТ???" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQO-aZ-SSc">
+                                                <rect key="frame" x="20" y="589.33333333333337" width="400" height="21"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" systemColor="systemRedColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="glW-V6-sQ3" firstAttribute="centerX" secondItem="v5s-H4-mwd" secondAttribute="centerX" id="0Qe-NT-bPX"/>
+                                            <constraint firstAttribute="trailing" secondItem="H6S-xx-hd7" secondAttribute="trailing" constant="40" id="2zP-Mg-3gR"/>
+                                            <constraint firstItem="exF-kk-o00" firstAttribute="top" secondItem="aqL-jI-Lwb" secondAttribute="bottom" constant="20" id="3d5-Ag-caI"/>
+                                            <constraint firstItem="exF-kk-o00" firstAttribute="leading" secondItem="MHt-GH-sUW" secondAttribute="leading" constant="20" id="58j-yL-p57"/>
+                                            <constraint firstItem="H6S-xx-hd7" firstAttribute="leading" secondItem="MHt-GH-sUW" secondAttribute="leading" constant="40" id="9GM-Aq-4Sd"/>
+                                            <constraint firstItem="H6S-xx-hd7" firstAttribute="top" secondItem="v5s-H4-mwd" secondAttribute="bottom" constant="20" id="DuO-Ap-XeK"/>
+                                            <constraint firstItem="glW-V6-sQ3" firstAttribute="centerY" secondItem="v5s-H4-mwd" secondAttribute="centerY" id="EfU-qL-k6i"/>
+                                            <constraint firstItem="v5s-H4-mwd" firstAttribute="top" secondItem="MHt-GH-sUW" secondAttribute="top" constant="20" symbolic="YES" id="Ffb-F3-GAX"/>
+                                            <constraint firstItem="YQO-aZ-SSc" firstAttribute="top" secondItem="exF-kk-o00" secondAttribute="bottom" constant="20" id="IHS-D5-V7m"/>
+                                            <constraint firstItem="YQO-aZ-SSc" firstAttribute="leading" secondItem="MHt-GH-sUW" secondAttribute="leading" constant="20" id="In3-a1-tJe"/>
+                                            <constraint firstItem="aqL-jI-Lwb" firstAttribute="leading" secondItem="MHt-GH-sUW" secondAttribute="leading" constant="40" id="Lyb-Mx-4HM"/>
+                                            <constraint firstItem="aqL-jI-Lwb" firstAttribute="top" secondItem="H6S-xx-hd7" secondAttribute="bottom" constant="20" id="OIz-Ra-fEF"/>
+                                            <constraint firstItem="v5s-H4-mwd" firstAttribute="leading" secondItem="MHt-GH-sUW" secondAttribute="leading" constant="20" id="SP5-gd-LoZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="exF-kk-o00" secondAttribute="trailing" constant="20" id="lPI-eH-P05"/>
+                                            <constraint firstAttribute="trailing" secondItem="YQO-aZ-SSc" secondAttribute="trailing" constant="20" id="myy-22-74v"/>
+                                            <constraint firstAttribute="trailing" secondItem="aqL-jI-Lwb" secondAttribute="trailing" constant="40" id="swA-pA-vqE"/>
+                                            <constraint firstAttribute="trailing" secondItem="v5s-H4-mwd" secondAttribute="trailing" constant="20" id="uEt-ah-95d"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="MHt-GH-sUW" firstAttribute="width" secondItem="1da-5N-vGA" secondAttribute="width" id="3VI-4w-EzE"/>
+                                    <constraint firstAttribute="bottom" secondItem="MHt-GH-sUW" secondAttribute="bottom" constant="254" id="X1B-RY-Dir"/>
+                                    <constraint firstItem="MHt-GH-sUW" firstAttribute="top" secondItem="1da-5N-vGA" secondAttribute="top" id="YyE-TG-mWF"/>
+                                    <constraint firstAttribute="trailing" secondItem="MHt-GH-sUW" secondAttribute="trailing" id="maz-Yd-0FF"/>
+                                    <constraint firstItem="MHt-GH-sUW" firstAttribute="leading" secondItem="1da-5N-vGA" secondAttribute="leading" id="rNW-Cr-hHe"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hwa-5E-QjI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MHt-GH-sUW" firstAttribute="top" secondItem="hwa-5E-QjI" secondAttribute="top" id="Bi0-tw-ZDa"/>
+                            <constraint firstItem="1da-5N-vGA" firstAttribute="leading" secondItem="hwa-5E-QjI" secondAttribute="leading" id="OAN-ox-a4f"/>
+                            <constraint firstItem="hwa-5E-QjI" firstAttribute="bottom" secondItem="MHt-GH-sUW" secondAttribute="bottom" constant="220" id="PDD-YA-ga1"/>
+                            <constraint firstItem="1da-5N-vGA" firstAttribute="width" secondItem="dix-rP-eB7" secondAttribute="width" id="RVu-71-bD6"/>
+                            <constraint firstItem="hwa-5E-QjI" firstAttribute="trailing" secondItem="1da-5N-vGA" secondAttribute="trailing" id="Ukg-GJ-BBh"/>
+                            <constraint firstItem="1da-5N-vGA" firstAttribute="top" secondItem="hwa-5E-QjI" secondAttribute="top" id="Vyy-n2-FAw"/>
+                            <constraint firstItem="MHt-GH-sUW" firstAttribute="width" secondItem="dix-rP-eB7" secondAttribute="width" id="c7t-GH-N4n"/>
+                            <constraint firstItem="MHt-GH-sUW" firstAttribute="leading" secondItem="hwa-5E-QjI" secondAttribute="leading" id="lZf-LW-au8"/>
+                            <constraint firstItem="1da-5N-vGA" firstAttribute="bottom" secondItem="hwa-5E-QjI" secondAttribute="bottom" constant="34" id="rsv-eV-rFh"/>
+                            <constraint firstItem="hwa-5E-QjI" firstAttribute="trailing" secondItem="MHt-GH-sUW" secondAttribute="trailing" id="vYf-8g-TZB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="glW-V6-sQ3" id="Trr-4r-JnZ"/>
+                        <outlet property="catImageView" destination="v5s-H4-mwd" id="Fgn-ng-sFd"/>
+                        <outlet property="catScrollView" destination="1da-5N-vGA" id="QRJ-j7-oat"/>
+                        <outlet property="errorMessageLabel" destination="YQO-aZ-SSc" id="crd-HW-YO0"/>
+                        <outlet property="generateButton" destination="aqL-jI-Lwb" id="1dk-XO-6df"/>
+                        <outlet property="statusLabel" destination="exF-kk-o00" id="JaL-ur-mck"/>
+                        <outlet property="textField" destination="H6S-xx-hd7" id="KhB-Dr-0Yz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="4gB-Dg-hSa" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="54.545454545454547" y="-2.510460251046025"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="catImageView" width="997" height="625"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
